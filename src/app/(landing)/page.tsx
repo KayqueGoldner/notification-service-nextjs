@@ -1,8 +1,8 @@
 import { Check } from "lucide-react";
 
-import { Heading } from "./components/heading";
-import { MaxWidthWrapper } from "./components/max-width-wrapper";
-import { ShinyButton } from "./components/shiny-button";
+import { Heading } from "@/components/heading";
+import { MaxWidthWrapper } from "@/components/max-width-wrapper";
+import { ShinyButton } from "@/components/shiny-button";
 
 const Page = () => {
   return (
@@ -47,7 +47,7 @@ const Page = () => {
             </ul>
 
             <div className="w-full max-w-80">
-              <ShinyButton 
+              <ShinyButton
                 href="/sign-up"
                 className="relative z-10 h-14 w-full text-base shadow-lg transition-shadow duration-300 hover:shadow-xl"
               >
