@@ -1,9 +1,31 @@
+"use client";
+
 import { LucideProps } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 import { LoadingSpinner } from "@/components/loading-spinner";
 import { Heading } from "@/components/heading";
+import { client } from "@/app/lib/client";
 
 const WelcomePage = () => {
+  const router = useRouter();
+  const { data } = useQuery({
+    queryKey: ["get-database-sync-status"],
+    queryFn: async () => {
+      const res = await client.auth.getDatabaseSyncStatus.$get();
+      return await res.json();
+    },
+    refetchInterval: (query) => {
+      return query.state.data?.isSynced ? false : 1000
+    }
+  });
+
+  useEffect(() => {
+    if(data?.isSynced) router.push("/dashboard");
+  }, [data, router]);
+
   return (
     <div className="flex w-full flex-1 items-center justify-center px-4">
       <BackgroundPattern className="absolute inset-0 left-1/2 z-0 -translate-x-1/2 opacity-75" />
