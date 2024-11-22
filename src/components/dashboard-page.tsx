@@ -1,4 +1,7 @@
+"use client";
+
 import { ArrowLeft } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 
@@ -17,6 +20,8 @@ export const DashboardPage = ({
   hideBackButton,
   cta
 }: DashboardPageProps) => {
+  const router = useRouter();
+
   return (
     <section className="flex-1 h-full w-full flex flex-col">
       <div className="w-full p-6 sm:p-8 flex justify-between border-b border-gray-200">
@@ -26,6 +31,7 @@ export const DashboardPage = ({
               <Button 
                 variant="outline"
                 className="w-fit bg-white"
+                onClick={() => router.push("/dashboard")}
               >
                 <ArrowLeft className="size-4" />
               </Button>
