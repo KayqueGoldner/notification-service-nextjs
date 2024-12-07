@@ -1,3 +1,4 @@
+import { z } from "zod";
 import { addMonths, startOfMonth } from "date-fns";
 
 import { db } from "@/db";
@@ -36,4 +37,18 @@ export const projectRouter = router({
       resetDate
     });
   }),
+
+  setDiscordId: privateProcedure
+    .input(z.object({ discordId: z.string().max(20) }))
+    .mutation(async ({ c, ctx, input }) => {
+      const { user } = ctx;
+      const { discordId } = input;
+
+      await db.user.update({
+        where: { id: user.id },
+        data: { discordId }
+      });
+
+      return c.json({ success: true });
+    })
 });
