@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# [Notification Service](https://notification-service-nextjs.vercel.app/)  
 
-## Getting Started
+A **Notification Service App** designed to simplify event notifications and upgrades. With seamless integration to Discord and Stripe, this application offers real-time event tracking and a flexible API for event management, all within a modern and responsive design.  
 
-First, run the development server:
+![Application Screenshot](/notification-service-app.png "Application Screenshot")  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Authentication**: Secure and fast login powered by Clerk.  
+- **Real-time Event Alerts**: Instantly send alerts for any event to your Discord server.  
+- **API Integration**: Manage your events programmatically with a robust API.  
+- **Upgrade Plans**: Upgrade seamlessly to premium plans using Stripe's secure payment gateway.  
+- **Responsive Design**: Optimized for flawless performance across all device sizes.  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Technologies Used  
 
-## Learn More
+- **Frontend**:  
+  - [Next.js](https://nextjs.org/) - A React framework for server-side rendering and static site generation.  
 
-To learn more about Next.js, take a look at the following resources:
+- **Backend**:  
+  - [Hono](https://hono.dev/) - A lightweight and high-performance web framework for building APIs.  
+  - [Prisma](https://www.prisma.io/) - An ORM (Object-Relational Mapping) tool for database interaction, ensuring type safety and seamless database queries.  
+  - [Discord](https://discord.com/developers/docs/intro) - Integration with Discord's API to send real-time notifications directly to servers.  
+  - [TanStack Query](https://tanstack.com/query/latest/docs/framework/react/overview) - A powerful library for managing server state with features like fetching, caching, and synchronization.  
+  - [Stripe](https://stripe.com/) - A payment processing platform used for managing subscription plans and secure payments.  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Programming Language**:  
+  - [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript for robust and scalable development.  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Styling**:  
+  - [TailwindCSS](https://tailwindcss.com/) - Utility-first CSS framework for fast and efficient styling.  
+  - [Shadcn UI](https://ui.shadcn.com/) - A collection of accessible and customizable UI components.  
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Authentication**:  
+  - [Clerk](https://clerk.com/) - A user authentication service with support for multiple login methods.  
